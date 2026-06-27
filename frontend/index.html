@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#19b38a">
+  <title>VisaAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="page-shell">
+    <header class="topbar glass-panel">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">
+          <svg class="svg-icon"><use href="#icon-shield-check"></use></svg>
+        </div>
+        <div class="brand-copy">
+          <div class="brand-name">VisaAI</div>
+          <div class="brand-subtitle">Smart Visa Decision Assistant</div>
+        </div>
+      </div>
+      <div class="topbar-badge">
+        <svg class="svg-icon topbar-badge-icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg>
+        AI Powered Prediction
+      </div>
+    </header>
+
+    <main class="layout-grid">
+      <aside class="hero-panel glass-panel">
+        <div class="hero-copy">
+          <h1>Visa Case<br><span>Prediction</span></h1>
+          <p>Get an AI-powered prediction for your visa application outcome.</p>
+        </div>
+
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+          <div class="passport">
+            <div class="passport-top">PASSPORT</div>
+            <div class="passport-mark">◌</div>
+          </div>
+          <div class="document-card">
+            <div class="doc-title">VISA APPLICATION</div>
+            <div class="doc-lines">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="stamp">APPROVED</div>
+          </div>
+          <div class="plane">✈</div>
+          <div class="trail"></div>
+        </div>
+
+        <div class="side-card secure-card">
+          <div class="side-icon">
+            <svg class="svg-icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg>
+          </div>
+          <div>
+            <h3>Secure &amp; Confidential</h3>
+            <p>Your data is processed securely and never stored.</p>
+          </div>
+        </div>
+
+        <div class="stats-mini side-card">
+          <div class="mini-stat"><span>95%+</span><small>Accuracy</small></div>
+          <div class="mini-stat"><span>10K+</span><small>Predictions</small></div>
+          <div class="mini-stat"><span>24/7</span><small>Available</small></div>
+        </div>
+      </aside>
+
+      <section class="app-panel glass-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Application Details</h2>
+            <p>Please provide accurate information for better prediction</p>
+          </div>
+          <button class="clear-button" id="clearAllBtn" type="button" aria-label="Clear all fields">
+            <svg class="svg-icon" aria-hidden="true"><use href="#icon-refresh"></use></svg>
+            Clear All
+          </button>
+        </div>
+
+        <form id="predictionForm" class="prediction-form" novalidate>
+          <div class="form-grid">
+            <div class="field-card">
+              <label class="field-label" for="continent">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+                Continent
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+                <select id="continent" aria-label="Continent">
+                  <option value="">Select Continent</option>
+                  <option>Asia</option>
+                  <option>Europe</option>
+                  <option>Africa</option>
+                  <option>North America</option>
+                  <option>South America</option>
+                  <option>Oceania</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="education_of_employee">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-graduation"></use></svg>
+                Education
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-graduation"></use></svg>
+                <select id="education_of_employee" aria-label="Education">
+                  <option value="">Select Education</option>
+                  <option>Bachelor's</option>
+                  <option>Master's</option>
+                  <option>Doctorate</option>
+                  <option>High School</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="has_job_experience">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg>
+                Has Job Experience
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg>
+                <select id="has_job_experience" aria-label="Has Job Experience">
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="requires_job_training">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-book-open"></use></svg>
+                Requires Job Training
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-book-open"></use></svg>
+                <select id="requires_job_training" aria-label="Requires Job Training">
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="region_of_employment">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                Region of Employment
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                <select id="region_of_employment" aria-label="Region of Employment">
+                  <option value="">Select Region</option>
+                  <option>Midwest</option>
+                  <option>Northeast</option>
+                  <option>South</option>
+                  <option>West</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="unit_of_wage">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+                Unit of Wage
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+                <select id="unit_of_wage" aria-label="Unit of Wage">
+                  <option value="">Select Unit</option>
+                  <option>Hour</option>
+                  <option>Week</option>
+                  <option>Month</option>
+                  <option>Year</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="full_time_position">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-user-check"></use></svg>
+                Full Time Position
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-user-check"></use></svg>
+                <select id="full_time_position" aria-label="Full Time Position">
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <svg class="svg-icon select-chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="no_of_employees">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+                Number of Employees
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+                <input type="number" id="no_of_employees" placeholder="1 - 100000" min="1" max="100000" inputmode="numeric" aria-label="Number of Employees">
+              </div>
+            </div>
+
+            <div class="field-card">
+              <label class="field-label" for="yr_of_estab">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
+                Year of Establishment
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
+                <input type="number" id="yr_of_estab" placeholder="1800 - 2025" min="1800" max="2025" inputmode="numeric" aria-label="Year of Establishment">
+              </div>
+            </div>
+
+            <div class="field-card field-card-wide">
+              <label class="field-label" for="prevailing_wage">
+                <svg class="svg-icon field-label-icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+                Prevailing Wage ($)
+              </label>
+              <div class="field-control">
+                <svg class="svg-icon field-icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+                <input type="number" id="prevailing_wage" placeholder="1000 - 1000000" min="1000" max="1000000" inputmode="decimal" aria-label="Prevailing Wage">
+              </div>
+            </div>
+          </div>
+
+          <button class="predict-button" id="predictBtn" type="submit">
+            <span class="predict-button-content">
+              <svg class="svg-icon predict-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
+              <span class="btn-title">Predict Visa Case Status</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </span>
+          </button>
+        </form>
+
+        <div class="result-slot">
+          <div class="result-card" id="resultBox" hidden aria-live="polite"></div>
+        </div>
+
+        <p class="disclaimer"><strong>Disclaimer:</strong> This prediction is generated by AI and for reference only. Final decision rests with the authorities.</p>
+      </section>
+    </main>
+  </div>
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="icon-shield-check" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      <path d="m9 12 2 2 4-4"></path>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M2 12h20"></path>
+      <path d="M12 2c3 3.3 4.5 6.8 4.5 10S15 18.7 12 22c-3-3.3-4.5-6.8-4.5-10S9 5.3 12 2z"></path>
+    </symbol>
+    <symbol id="icon-graduation" viewBox="0 0 24 24">
+      <path d="M22 10 12 5 2 10l10 5 10-5z"></path>
+      <path d="M6 12v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4"></path>
+      <path d="M2 10v4"></path>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="14" rx="2"></rect>
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+      <path d="M3 13h18"></path>
+    </symbol>
+    <symbol id="icon-book-open" viewBox="0 0 24 24">
+      <path d="M2 5a3 3 0 0 1 3-3h7v19H5a3 3 0 0 1-3-3V5z"></path>
+      <path d="M22 5a3 3 0 0 0-3-3h-7v19h7a3 3 0 0 0 3-3V5z"></path>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24">
+      <path d="M12 21s6-5.2 6-11a6 6 0 0 0-12 0c0 5.8 6 11 6 11z"></path>
+      <circle cx="12" cy="10" r="2.5"></circle>
+    </symbol>
+    <symbol id="icon-dollar" viewBox="0 0 24 24">
+      <path d="M12 1v22"></path>
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3 3 0 0 1 0 6H6"></path>
+    </symbol>
+    <symbol id="icon-user-check" viewBox="0 0 24 24">
+      <path d="M15 19a6 6 0 0 0-12 0"></path>
+      <circle cx="9" cy="8" r="4"></circle>
+      <path d="m16 11 2 2 4-4"></path>
+    </symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+      <path d="M8 7h.01"></path>
+      <path d="M12 7h.01"></path>
+      <path d="M16 7h.01"></path>
+      <path d="M8 11h.01"></path>
+      <path d="M12 11h.01"></path>
+      <path d="M16 11h.01"></path>
+      <path d="M9 21v-5h6v5"></path>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+      <path d="M8 2v4"></path>
+      <path d="M16 2v4"></path>
+      <path d="M3 10h18"></path>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="M12 2l1.8 4.8L18 8.6l-4.2 1.8L12 15l-1.8-4.6L6 8.6l4.2-1.8L12 2z"></path>
+      <path d="M19 12l.9 2.4L22 15l-2.1.6L19 18l-.9-2.4L16 15l2.1-.6L19 12z"></path>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="m20 6-11 11-5-5"></path>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24">
+      <path d="M21 12a9 9 0 0 0-15.5-6.4L3 8"></path>
+      <path d="M3 3v5h5"></path>
+      <path d="M3 12a9 9 0 0 0 15.5 6.4L21 16"></path>
+      <path d="M16 21h5v-5"></path>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M12 7v5l3 2"></path>
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24">
+      <path d="m12 3 9 5-9 5-9-5 9-5z"></path>
+      <path d="m3 13 9 5 9-5"></path>
+      <path d="m3 17 9 5 9-5"></path>
+    </symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
