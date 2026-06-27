@@ -1,5 +1,4 @@
-﻿const API_URL = "http://192.168.29.203:5000/predict";
-
+﻿const API_URL = "https://visaai-6oa9.onrender.com/predict";
 const form = document.getElementById("predictionForm");
 const predictBtn = document.getElementById("predictBtn");
 const resultBox = document.getElementById("resultBox");
