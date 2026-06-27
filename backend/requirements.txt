@@ -10,3 +10,4 @@ tabulate
 boto3
 matplotlib
 seaborn
+gunicorn
